@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+
+#game-canvas {
+  background-color: pink;
+  height: 500px;
+  width: 500px;
+}
