@@ -1,0 +1,18 @@
+/* PHASE 8: Thumbs */
+
+.profile-grid {
+
+}
+
+.profile-grid li{
+  float: left;
+  width: 27%;
+  margin: 6px;
+  box-sizing: border-box;
+}
+
+.thumb img{
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
