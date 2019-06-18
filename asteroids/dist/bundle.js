@@ -91,9 +91,20 @@
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src/moving_object.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  let canvas = document.getElementById(\"game-canvas\");\n  canvas.width = 500;\n  canvas.height = 500;\n\n  const ctx = canvas.getContext(\"2d\");\n  let mo = new MovingObject(\n    { pos: [200, 200], vel: [10, 10], radius: 150, color: \"pink\" }\n  );\n  let bo = new MovingObject(\n    { pos: [100, 100], vel: [10, 10], radius: 100, color: \"turquoise\" }\n  );\n  let po = new MovingObject(\n    { pos: [65, 120], vel: [10, 10], radius: 15, color: \"white\" }\n  );\n  let no = new MovingObject(\n    { pos: [115, 75], vel: [10, 10], radius: 15, color: \"white\" }\n  );\n\n  mo.draw(ctx);\n  bo.draw(ctx);\n  po.draw(ctx);\n  no.draw(ctx);\n});\n  \n  \n\n// window.MovingObject = MovingObject;\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/moving_object.js":
+/*!******************************!*\
+  !*** ./src/moving_object.js ***!
+  \******************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nfunction MovingObject(arg){\n  this.pos = arg.pos;\n  this.vel = arg.vel;\n  this.radius = arg.radius;\n  this.color = arg.color;\n}\n\n\nMovingObject.prototype.draw = function(ctx){\n  ctx.beginPath();\n  ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);\n  ctx.strokeStyle = \"orangered\";\n  ctx.lineWidth = 5;\n  ctx.stroke();\n  ctx.fillStyle = this.color;\n  ctx.fill();\n}\n\n\n\n\n\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack:///./src/moving_object.js?");
 
 /***/ })
 
